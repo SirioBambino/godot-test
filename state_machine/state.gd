@@ -1,22 +1,32 @@
 class_name State
 extends Node
 
+
+var state_machine : StateMachine
 var enabled : bool = false
-@export var transitions : Array[Transition] = []
+var transitions : Array[Transition] = []
 
 @export var concurrent : bool = false
+@export var priority : bool = false
 
-func enter(data := {}) -> void:
+signal state_completed
+
+func init(data := {}) -> void:
 	pass
-	
+
+
+func enter() -> void:
+	pass
+
+
 func exit() -> void:
 	pass
 
-## Called by the state machine on the process loop.
+
 func update(_delta : float) -> void:
 	pass
 
-## Called by the state machine on the physics process loop.
+
 func physics_update(_delta : float) -> void:
 	pass 
 	

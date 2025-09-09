@@ -1,5 +1,5 @@
 class_name StateSpawn
-extends PlayerState
+extends State
 
 var position : Vector3
 

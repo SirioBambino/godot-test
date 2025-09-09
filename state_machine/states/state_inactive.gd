@@ -1,5 +1,5 @@
 class_name StateInactive
-extends PlayerState
+extends State
 
 func enter(data := {}) -> void:
 	pass

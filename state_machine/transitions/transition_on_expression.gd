@@ -8,6 +8,7 @@ var _expr := Expression.new()
 var _source: Node
 
 func _ready():
+	#super._ready()
 	if source:
 		_source = get_node(source)
 	if expression_text != "":
@@ -18,7 +19,7 @@ func _ready():
 func can_transition() -> bool:
 	if not _expr or not _source:
 		return false
-	var result = _expr.execute([], self)
+	var result = _expr.execute([], _source)
 	if _expr.has_execute_failed():
 		return false
 	return bool(result)

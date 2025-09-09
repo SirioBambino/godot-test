@@ -15,3 +15,6 @@ func _ready() -> void:
 	state_machine = get_node("StateMachine")
 	
 	animation_player.playback_default_blend_time = 0.2
+
+func get_stats():
+	return stats
